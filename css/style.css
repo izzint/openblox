@@ -5,12 +5,12 @@
     margin-right: auto;
     width: 95%;
     text-align: center;
-    background-image: url("/img/WoodBanner.png");
-    margin: 0 auto;
+    background-image: url("/img/janbanner.png");
+    margin:  auto;
     width: 900px;
     height: 75px;
     position: relative;
-    top: 5px;
+    top: 15px;
 }
 
 .logo {
@@ -65,4 +65,34 @@ body {
     width: 900px;
     text-align: center;
 }
+
+#Body {
+    margin: 10px 0;
+    width: 900px;
+    background-color: black;
+}
+
+#SignInPane {
+    border: none;
+    margin-left: 0;
+    width: 152px;
+    height: 250px;
+}
+
+.FrontPagePanel {
+    position: relative;
+    top: 46px;
+    float: left;
+    border: solid 1px black;
+    margin: 5px;
+    margin-left: 5px;
+    background-color: White;
+}
+#LoginView {
+    border: solid 1px Black;
+    width: 150px;
+    height: 250px;
+}
+
+
 
