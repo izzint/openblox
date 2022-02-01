@@ -94,5 +94,80 @@ body {
     height: 250px;
 }
 
+#LoginView h5 {
+    background-color: #ccc;
+    border-bottom: solid 1px #000;
+    margin: 0;
+}
+
+h5 {
+    font: normal 11px/normal Verdana,sans-serif;
+letter-spacing: 1px;
+padding: 5px 5px 5px 5px;
+}
+
+.login {
+    height: 225px;
+    background-color: #eee;
+}
+
+.username {
+    padding: 3px 5px 3px 5px;
+    text-align: left;
+    font-size: 11.5px;
+    position: relative;
+    font-weight: bold;
+    top: -12px;
+   
+  }
+
+
+.password {
+    padding: 3px 5px 3px 5px;
+    text-align: left;
+    font-size: 11.5px;
+    position: relative;
+    font-weight: bold;
+    top: -12px;
+    white-space: nowrap;
+}
+
+.Label {
+	font-weight: bold;
+    font-size: 5px;
+}
+
+.TextBox {
+	border: dashed 2px Gray;
+	font-family: Verdana, Sans-Serif;
+    font-size: 10px;
+	padding: 3px;
+    width: 125px;
+    height: 10px;   
+}
+
+.LoginButtonMain {
+    padding: 10px 5px 5px 10px;
+    text-align: center;
+}
+
+.Button {
+	cursor: pointer;
+	background-color: #fff;
+	border: solid 1px #333;
+	color: #333;
+	font-family: Verdana, Sans-Serif;
+	font-size: .9em;
+	padding: 3px 10px 3px 10px;
+	text-decoration: none;
+}
+
+.Button:hover {
+    background-color: #6e99c9;
+    border: solid 1px #000;
+    color: #fff;
+}
+
+
 
 
