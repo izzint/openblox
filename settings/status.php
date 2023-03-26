@@ -4,9 +4,10 @@ $conn = mysqli_connect('localhost', 'root', '', 'openblox');
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $status = htmlspecialchars($_POST['toStatus']);
+    $status = substr(htmlspecialchars($_POST['toStatus']), 0, 100);
     $id = $_SESSION['currentID'];
 
+    
     $updateQuery = "UPDATE accounts SET about = '$status' WHERE id = $id";
     mysqli_query($conn, $updateQuery);
 

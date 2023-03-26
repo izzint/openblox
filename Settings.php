@@ -72,9 +72,9 @@
                 <div style="position: relative; top: -5px !important; left: 13px !important; font-family: Comic Sans MS;">
                     <h1>Account Settings</h1>
                     <hr style="width: 870px; margin-left: -0px;">
-                    <p>Set Your Status (max 50 chars):</p>
+                    <p>Set Your Status (max 100 chars):</p>
                     <form action="settings/status.php" method="post">
-                        <input type="text" style="width: 200px;" maxlength="50" name="toStatus">
+                        <input type="text" style="width: 200px;" maxlength="100" name="toStatus">
                         <button type="submit" name="login">Set Status</button>
                     </form>
                     <br>
