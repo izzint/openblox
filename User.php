@@ -1,6 +1,7 @@
 <?php
-// dont forget to set a password!
-$conn = mysqli_connect('localhost', 'root', '', 'openblox');
+include 'api/private/sqlconn.php';
+include 'api/general.php';
+
 session_start();
 // disable on production
 ini_set('display_errors', 0); 
@@ -12,6 +13,7 @@ if (!empty($_GET)) {
 // If URL has ID parameter (?id=1), select account row with matching ID. If no parameter, redirect to logged-in homepage; if not logged in, go to index file.
 if (isset($urlID)) {
   $sql = "SELECT * FROM accounts WHERE id = $urlID";
+  $badgeList = getBadges($urlID);
   $viewingAsSelf = false;
 } else {
   if ($_SESSION["loggedin"] == false) {
@@ -19,11 +21,15 @@ if (isset($urlID)) {
     exit;
   } else {
     $sql = "SELECT * FROM accounts WHERE id = {$_SESSION['currentID']}";
+    $badgeList = getBadges($_SESSION['currentID']);
     $viewingAsSelf = true;
   }
 }
 
 $result = mysqli_query($conn, $sql);
+
+//AVA.. DO NOT TOUCH THIS!! IF YOU DO, I LOSE EVERYTHING, PLEASE DONT. 9999 lool 88 7yg hhuhi FChicken , Bigmap , 99999 , 999 , 9999 Next we will tka e alook at, 
+
 
 // theres prolly a better way to do this
 if ($result->num_rows === 0) {
@@ -51,7 +57,7 @@ if ($result->num_rows === 0) {
     <meta name="theme-color" content="#FF0000">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $username . "'s " . "OPENBLOX Home Page";?></title>
-    <meta name="description" content="Free Games at openblox.xyz">
+    <meta name="description" content="Free Games at openblox.lol">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="ROBLOXicon" type="image/x-icon" href="favicon.ico?">
     <link rel="stylesheet" href="css/style.css">
@@ -71,7 +77,7 @@ if ($result->num_rows === 0) {
           ?>
         </div>
           <div class="logo">
-            <a href="/index.php"><img src="img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
+            <a href="/"><img src="img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
           </div>
           <div class="navbar">
               <span>
@@ -95,7 +101,7 @@ if ($result->num_rows === 0) {
               </span>
               <span class="Separator"> | </span>
               <span>
-                <a class="MenuItem" href="/Blog">News </a><a href="/blog/rcc.php"><img src="img/icons/silk/feed.png"></a>
+                <a class="MenuItem" href="http://blog.openblox.lol">News </a><a href="http://blog.openblox.lol/rss.php"><img src="img/feed.png"></a>
               </span>
               <span class="Separator"> | </span>
               <span>
@@ -110,8 +116,8 @@ if ($result->num_rows === 0) {
                     <center><h5 style="color: gray; position: relative; top: -20px !important">[ Offline ]</h5>
                     <div style="top: -24px !important; position: relative;">
                         <center><span><?php echo $username . "'s " . 'OPENBLOX:' ?></p></center>
-                        <center><a href=<?php echo "/user.php?id=" . $id ?> style="position: relative; top: -14px"><?php echo "openblox.rf.gd/user.php?id=" . $id ?></a></center>
-                        <center><span style="position: absolute; left: 175px !important; top: 36px !important;"><?php echo ($viewingAsSelf) ? '<a href="settings.php">Account Settings</a>' : '' ?></p></span></center>
+                        <center><a href=<?php echo "/User.php?id=" . $id ?> style="position: relative; top: -14px"><?php echo "openblox.rf.gd/User.php?id=" . $id ?></a></center>
+                        <center><span style="position: absolute; left: 175px !important; top: 36px !important;"><?php echo ($viewingAsSelf) ? '<a href="Settings.php">Account Settings</a>' : '' ?></p></span></center>
                     </div>
                     <table width="100">
                     <thead>
@@ -154,6 +160,29 @@ if ($result->num_rows === 0) {
                         </div>
                 </div>
             </div>
+      <div id="UserBadgesPane" style="position: relative; top: -40px !important; left: -457px !important;">
+        <div id="UserBadges">
+          <h4 class="headerText"><a href="Badges.php">Badges</a></h4>
+          <table cellspacing="0" border="0" align="Center" style="min-height: 115px;">
+            <tbody>
+              <tr>
+                  <?php echo ($badgeList['admin'] == 1) ? printBadges("Administrator", "Administrator-75x75.png", "Test Alt") : null?>
+                  <?php echo ($badgeList['buildersClub'] == 1) ? printBadges("Builders Club", "BuildersClub-75x75.png", "Test Alt") : null?>
+                  <?php echo ($badgeList['bricksmith'] == 1) ? printBadges("Bricksmith", "Bricksmith-54x75.jpg", "Test Alt") : null?>
+                  <?php echo ($badgeList['combat1'] == 1) ? printBadges("Combat Initiation", "CombatInitiation-75x75.jpg", "Test Alt") : null?>
+                  <?php echo ($badgeList['combat2'] == 1) ? printBadges("Warrior", "Warrior-75x75.jpg", "Test Alt") : null?>
+                  <?php echo ($badgeList['forumMod'] == 1) ? printBadges("Forum Moderator", "ForumModerator-75x75.png", "Test Alt") : null?>
+                  <?php echo ($badgeList['friendship'] == 1) ? printBadges("Friendship", "Friendship-75x75.jpg", "Test Alt") : null?>
+                  <?php echo ($badgeList['homestead'] == 1) ? printBadges("Homestead", "Homestead-70x75.jpg", "Test Alt") : null?>
+                  <?php echo ($badgeList['imageMod'] == 1) ? printBadges("Image Moderator", "ImageModerator-75x75.png", "Test Alt") : null?>
+                  <?php echo ($badgeList['inviter'] == 1) ? printBadges("Inviter", "Inviter-75x75.png", "Test Alt") : null?>
+                  <?php echo ($badgeList['veteran'] == 1) ? printBadges("Veteran", "Veteran-75x75.png", "Test Alt") : null?>
+                  <?php echo ($badgeList['awesome'] == 1) ? printBadges("Awesome", "Awesome-75x75.png", "Test Alt") : null?>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
         </div>
         <div id="Footer" class="FrontPagePanel" style="background: transparent;border: transparent;">
               <hr>
@@ -163,13 +192,7 @@ if ($result->num_rows === 0) {
                 <a id="ctl00_rbxFooter_hlRobloxCorporation" href="info/About.aspx">ROBLOX Corporation</a>,
                 ©2009. Patents pending.<br>
                 OPENBLOX is not affiliated with ROBLOX, Lego, MegaBloks, Bionicle, Pokemon, Nintendo, Lincoln Logs, Yu Gi Oh, K'nex, Tinkertoys, Erector Set, or the Pirates of the Caribbean. ARrrr!<br>
-                Use of this site signifies your acceptance of the
-                <a id="ctl00_rbxFooter_hlTermsOfService" href="info/TermsOfService.aspx">Terms and Conditions</a>.<br>
-                <a id="ctl00_rbxFooter_hlPrivacyPolicy" href="info/Privacy.aspx">Privacy Policy</a>
-                &nbsp;|&nbsp; <a href="https://web.archive.org/web/20080603131404/mailto:info@roblox.com">Contact Us</a> &nbsp;|&nbsp;
-                <a id="ctl00_rbxFooter_hlAboutRoblox" href="info/About.aspx">About Us</a>
-                &nbsp;|&nbsp;
-                <a id="ctl00_rbxFooter_HyperLink1" href="info/Jobs.aspx">Jobs</a></p>
-          </div>  
+                Based off the Jaunary 2009 version of ROBLOX. 
+        </div>  
   </body>
 </html>

@@ -35,7 +35,7 @@
           ?>
         </div>
           <div class="logo">
-          <a href="/index.php"><img src="img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
+          <a href="/"><img src="img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
           </div>
           <div class="navbar">
             <span>
@@ -59,7 +59,7 @@
               </span>
               <span class="Separator"> | </span>
               <span>
-                <a class="MenuItem" href="/Blog">News </a><a href="/blog/rcc.php"><img src="img/icons/silk/feed.png"></a>
+                <a class="MenuItem" href="http://blog.openblox.lol">News </a><a href="http://blog.openblox.lol/rss.php"><img src="img/feed.png"></a>
               </span>
               <span class="Separator"> | </span>
               <span>
@@ -96,13 +96,7 @@
                 <a id="ctl00_rbxFooter_hlRobloxCorporation" href="info/About.aspx">ROBLOX Corporation</a>,
                 ©2009. Patents pending.<br>
                 OPENBLOX is not affiliated with ROBLOX, Lego, MegaBloks, Bionicle, Pokemon, Nintendo, Lincoln Logs, Yu Gi Oh, K'nex, Tinkertoys, Erector Set, or the Pirates of the Caribbean. ARrrr!<br>
-                Use of this site signifies your acceptance of the
-                <a id="ctl00_rbxFooter_hlTermsOfService" href="info/TermsOfService.aspx">Terms and Conditions</a>.<br>
-                <a id="ctl00_rbxFooter_hlPrivacyPolicy" href="info/Privacy.aspx">Privacy Policy</a>
-                &nbsp;|&nbsp; <a href="https://web.archive.org/web/20080603131404/mailto:info@roblox.com">Contact Us</a> &nbsp;|&nbsp;
-                <a id="ctl00_rbxFooter_hlAboutRoblox" href="info/About.aspx">About Us</a>
-                &nbsp;|&nbsp;
-                <a id="ctl00_rbxFooter_HyperLink1" href="info/Jobs.aspx">Jobs</a></p>
+                Based off the Jaunary 2009 version of ROBLOX. 
           </div> 
       </div>
   </body>

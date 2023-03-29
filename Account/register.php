@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'openblox');
+include '../api/private/sqlconn.php';
 session_start();
 
 // Check if the form has been submitted
@@ -18,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             // Insert the user's information into the database
             $sql = "INSERT INTO accounts (username, password) VALUES ('$username', '$password')";
+            $badgeSQL = "INSERT INTO `badge` (`id`, `admin`, `bricksmith`, `buildersClub`, `combat1`, `combat2`, `combat3`, `forumMod`, `friendship`, `homestead`, `imageMod`, `inviter`, `veteran`) VALUES (NULL, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0')";
             mysqli_query($conn, $sql);
+            mysqli_query($conn, $badgeSQL);
 
             // Redirect the user to the user page
             header('Location: /');

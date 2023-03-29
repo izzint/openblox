@@ -1,6 +1,6 @@
 <?php
 // dont forget to set a password!
-$conn = mysqli_connect('localhost', 'root', '', 'openblox');
+include '../api/private/sqlconn.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

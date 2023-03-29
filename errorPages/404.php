@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#FF0000">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>OPENBLOX | Missing Item</title>
-    <meta name="description" content="Free Games at openblox.xyz">
+    <meta name="description" content="Free Games at openblox.lol">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="ROBLOXicon" type="image/x-icon" href="favicon.ico?">
     <link rel="stylesheet" href="/css/style.css">
@@ -33,10 +33,10 @@
           ?>
         </div>
           <div class="logo">
-          <a href="/index.php"><img src="/img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
+          <a href="/"><img src="/img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
           </div>
         </div>
-        <center><strong><h2 style="padding: 50px; position: relative; top: 50px; width: 50%; font-family:'Comic Sans MS',Verdana,sans-serif; margin: auto;">The item you requested does not exist</h2></strong></center>
+        <center><strong><h2 style="padding: 50px; position: relative; top: 50px; width: 50%; font-family:'Comic Sans MS',Verdana,sans-serif; margin: auto;">The item you requested does not exist (or does not exist yet!)</h2></strong></center>
         <div id="Body">
             
 
@@ -51,13 +51,7 @@
                 <a id="ctl00_rbxFooter_hlRobloxCorporation" href="info/About.aspx">ROBLOX Corporation</a>,
                 ©2009. Patents pending.<br>
                 OPENBLOX is not affiliated with ROBLOX, Lego, MegaBloks, Bionicle, Pokemon, Nintendo, Lincoln Logs, Yu Gi Oh, K'nex, Tinkertoys, Erector Set, or the Pirates of the Caribbean. ARrrr!<br>
-                Use of this site signifies your acceptance of the
-                <a id="ctl00_rbxFooter_hlTermsOfService" href="info/TermsOfService.aspx">Terms and Conditions</a>.<br>
-                <a id="ctl00_rbxFooter_hlPrivacyPolicy" href="info/Privacy.aspx">Privacy Policy</a>
-                &nbsp;|&nbsp; <a href="https://web.archive.org/web/20080603131404/mailto:info@roblox.com">Contact Us</a> &nbsp;|&nbsp;
-                <a id="ctl00_rbxFooter_hlAboutRoblox" href="info/About.aspx">About Us</a>
-                &nbsp;|&nbsp;
-                <a id="ctl00_rbxFooter_HyperLink1" href="info/Jobs.aspx">Jobs</a></p>
+                Based off the Jaunary 2009 version of ROBLOX.
           </div> 
               </div>
             </div>

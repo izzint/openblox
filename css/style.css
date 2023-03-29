@@ -102,7 +102,6 @@ body {
 #Body {
     margin: 10px 0;
     width: 900px;
-    background-color: black;
 }
 
 #SignInPane {
@@ -3073,6 +3072,14 @@ div.AspNet-TreeView ul{
 #ProfilePane,#UserPlacesPane,#UserBadgesPane,#UserStatisticsPane,#FriendsPane,#FavoritesPane,.FriendRequestsPane,#UserAssetsPane{
     border:solid 1px #000;
 }
+#UserBadgesPane .headerText {
+    background-color: #ccc;
+	border-bottom: solid 1px #000;
+	color: #333;
+	font-family: Comic Sans MS, Verdana, Sans-Serif;
+	margin: 0;
+	text-align: center;
+}
 .FriendRequestsPane,#UserModelsContainer,#UserAssetsPane{
     clear:both;
     margin:10px 0 0 0;
@@ -3155,6 +3162,9 @@ div.AspNet-TreeView ul{
     line-height:1em;
     margin-bottom:5px;
     margin-top:5px;
+}
+#BadgeMarker{
+    height: 500px;
 }
 .NoResults{
     line-height:1.3em;
