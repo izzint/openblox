@@ -31,38 +31,7 @@
             }
           ?>
         </div>
-          <div class="logo">
-          <a href="/"><img src="img/roblox.png" alt="ROBLOX Logo" style="width:28%; align-items: center; position:relative; top: 4px;"></a>
-          </div>
-          <div class="navbar">
-            <span>
-                <a class="MenuItem" href="/User.php">My OPENBLOX</a>
-              </span>
-              <span class="Separator"> | </span>
-              <span>
-                <a class="MenuItem" href="/Games.php">Games</a>
-              </span>
-              <span class="Separator"> | </span>
-              <span>
-                <a class="MenuItem" href="/Catalog.php">Catalog</a>
-              </span>
-              <span class="Separator"> | </span>
-              <span>
-                <a class="MenuItem" href="/Browse.php">People</a>
-              </span>
-              <span class="Separator"> | </span>
-              <span>
-                <a class="MenuItem" href="/Forum.php">Forum</a>
-              </span>
-              <span class="Separator"> | </span>
-              <span>
-                <a class="MenuItem" href="http://blog.openblox.lol">News </a><a href="http://blog.openblox.lol/rss.php"><img src="img/feed.png"></a>
-              </span>
-              <span class="Separator"> | </span>
-              <span>
-                <a class="MenuItem" href="/Source.php">Downloads</a>
-              </span>
-          </div>
+            <?php include "Header.php" ?>
         </div>
         <div id="Body">
           <div class="FrontPagePanel" id="SignInPane" style="font: normal 8pt/normal 'Comic Sans MS',Verdana,sans-serif; height: 194px;">
@@ -113,16 +82,7 @@
                 <br>
                 <h4 style="border-bottom: solid black 1px;">More things coming soon!</h4>
         </div>
-        <div id="Footer" class="FrontPagePanel" style="background: transparent;border: transparent;">
-              <hr>
-              <p class="Legalese">
-                OPENBLOX, "Awsom Brick.", characters, logos, names, and all related indicia
-                are trademarks of
-                <a id="ctl00_rbxFooter_hlRobloxCorporation" href="info/About.aspx">ROBLOX Corporation</a>,
-                ©2009. Patents pending.<br>
-                OPENBLOX is not affiliated with ROBLOX, Lego, MegaBloks, Bionicle, Pokemon, Nintendo, Lincoln Logs, Yu Gi Oh, K'nex, Tinkertoys, Erector Set, or the Pirates of the Caribbean. ARrrr!<br>
-                Based off the Jaunary 2009 version of ROBLOX.
-          </div> 
+        <?php include "Footer.html" ?>
       </div>
   </body>
 </html>

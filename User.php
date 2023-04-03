@@ -130,7 +130,7 @@ if ($result->num_rows === 0) {
                     
                 </div>
             </div>
-            <div id="UserPlaces" class="FrontPagePanel" style=" width: 444px; relative; left: 10px;">
+            <div id="UserPlaces" class="FrontPagePanel" style=" width: 444px; relative; left: 10px; max-height: 385px;">
                 <h4 class="userPlacesPlane" style="margin-top: 0px; text-align: center;">Showcase</h4>
                 <div class="AccordionHeader" style="margin-top: -23px;">Starter Place</div>
                 <div style="display:block;">
@@ -159,32 +159,35 @@ if ($result->num_rows === 0) {
                             <span id="ctl00_cphRoblox_rbxUserPlacesPane_ctl02_rbxPlatform_lDescription">Hello, World!</span>
                         </div>
                 </div>
-            </div>
-      <div id="UserBadgesPane" style="position: relative; top: -40px !important; left: -457px !important;">
-        <div id="UserBadges">
-          <h4 class="headerText"><a href="Badges.php">Badges</a></h4>
-          <table cellspacing="0" border="0" align="Center" style="min-height: 115px;">
-            <tbody>
-              <tr>
-                  <?php echo ($badgeList['admin'] == 1) ? printBadges("Administrator", "Administrator-75x75.png", "Test Alt") : null?>
-                  <?php echo ($badgeList['buildersClub'] == 1) ? printBadges("Builders Club", "BuildersClub-75x75.png", "Test Alt") : null?>
-                  <?php echo ($badgeList['bricksmith'] == 1) ? printBadges("Bricksmith", "Bricksmith-54x75.jpg", "Test Alt") : null?>
-                  <?php echo ($badgeList['combat1'] == 1) ? printBadges("Combat Initiation", "CombatInitiation-75x75.jpg", "Test Alt") : null?>
-                  <?php echo ($badgeList['combat2'] == 1) ? printBadges("Warrior", "Warrior-75x75.jpg", "Test Alt") : null?>
-                  <?php echo ($badgeList['forumMod'] == 1) ? printBadges("Forum Moderator", "ForumModerator-75x75.png", "Test Alt") : null?>
-                  <?php echo ($badgeList['friendship'] == 1) ? printBadges("Friendship", "Friendship-75x75.jpg", "Test Alt") : null?>
-                  <?php echo ($badgeList['homestead'] == 1) ? printBadges("Homestead", "Homestead-70x75.jpg", "Test Alt") : null?>
-                  <?php echo ($badgeList['imageMod'] == 1) ? printBadges("Image Moderator", "ImageModerator-75x75.png", "Test Alt") : null?>
-                  <?php echo ($badgeList['inviter'] == 1) ? printBadges("Inviter", "Inviter-75x75.png", "Test Alt") : null?>
-                  <?php echo ($badgeList['veteran'] == 1) ? printBadges("Veteran", "Veteran-75x75.png", "Test Alt") : null?>
-                  <?php echo ($badgeList['awesome'] == 1) ? printBadges("Awesome", "Awesome-75x75.png", "Test Alt") : null?>
-              </tr>
-            </tbody>
-          </table>
+                </div>
+              <div id="UserBadgesPane" style="position: relative; top: -40px !important; left: -457px !important;">
+                <div id="UserBadges">
+                  <h4 class="headerText"><a href="Badges.php">Badges</a></h4>
+                  <table cellspacing="0" border="0" align="Center" style="min-height: 115px;">
+                    <tbody>
+                      <tr>
+                          <?php echo ($badgeList['admin'] == 1) ? printBadges("Administrator", "Administrator-75x75.png", "Test Alt") : null?>
+                          <?php echo ($badgeList['buildersClub'] == 1) ? printBadges("Builders Club", "BuildersClub-75x75.png", "Test Alt") : null?>
+                          <?php echo ($badgeList['bricksmith'] == 1) ? printBadges("Bricksmith", "Bricksmith-54x75.jpg", "Test Alt") : null?>
+                          <?php echo ($badgeList['combat1'] == 1) ? printBadges("Combat Initiation", "CombatInitiation-75x75.jpg", "Test Alt") : null?>
+                          <?php echo ($badgeList['combat2'] == 1) ? printBadges("Warrior", "Warrior-75x75.jpg", "Test Alt") : null?>
+                          <?php echo ($badgeList['forumMod'] == 1) ? printBadges("Forum Moderator", "ForumModerator-75x75.png", "Test Alt") : null?>
+                          <?php echo ($badgeList['friendship'] == 1) ? printBadges("Friendship", "Friendship-75x75.jpg", "Test Alt") : null?>
+                          <?php echo ($badgeList['homestead'] == 1) ? printBadges("Homestead", "Homestead-70x75.jpg", "Test Alt") : null?>
+                          <?php echo ($badgeList['imageMod'] == 1) ? printBadges("Image Moderator", "ImageModerator-75x75.png", "Test Alt") : null?>
+                          <?php echo ($badgeList['inviter'] == 1) ? printBadges("Inviter", "Inviter-75x75.png", "Test Alt") : null?>
+                          <?php echo ($badgeList['veteran'] == 1) ? printBadges("Veteran", "Veteran-75x75.png", "Test Alt") : null?>
+                          <?php echo ($badgeList['awesome'] == 1) ? printBadges("Awesome", "Awesome-75x75.png", "Test Alt") : null?>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
         </div>
-      </div>
         </div>
-        <div id="Footer" class="FrontPagePanel" style="background: transparent;border: transparent;">
+        </div>
+        </div>
+        <div id="Footer" class="FrontPagePanel" style="background: transparent; border: transparent; left: 510px; position: relative; bottom: -502px;margin-top: 68px;">
               <hr>
               <p class="Legalese">
                 OPENBLOX, "Awsom Brick.", characters, logos, names, and all related indicia
